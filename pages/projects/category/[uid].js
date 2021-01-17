@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Client } from '../../../prismic'
+import { Client } from '../../../prismic-example'
 import Prismic from 'prismic-javascript'
 import Container from '@material-ui/core/Container'
 import { RichText } from 'prismic-reactjs'

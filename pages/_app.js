@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { Client } from "../prismic";
+import { Client } from "../prismic-example";
 import { LayoutProvider } from '../utils/layout-context';
 import Layout from '../components/Layout'
 
@@ -26,7 +26,7 @@ export default function MyApp(appProps) {
   return (
     <React.Fragment>
       <Head>
-        <title>Helping Restore Lives | WITH LOVE Charity</title>
+        <title>Personal Training Jerusalem</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         {layout.favicon && layout.favicon.large && <link rel="icon" type="image/png" sizes="96x96" href={layout.favicon.large.url} />}
         {layout.favicon && layout.favicon.medium && <link rel="icon" type="image/png" sizes="32x32" href={layout.favicon.medium.url} />}

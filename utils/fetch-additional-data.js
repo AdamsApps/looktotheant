@@ -1,4 +1,4 @@
-import { Client } from '../prismic'
+import { Client } from '../prismic-example'
 import Prismic from "prismic-javascript"
 
 export const fetchAdditionalData = async (slices, ref = null) => {

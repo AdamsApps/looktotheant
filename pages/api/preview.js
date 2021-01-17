@@ -1,5 +1,5 @@
 import Prismic from "prismic-javascript";
-import { linkResolver } from '../../prismic.js'
+import { linkResolver } from '../../prismic-example.js'
 
 import smConfig from '../../sm.json'
 export const apiEndpoint = smConfig.apiEndpoint

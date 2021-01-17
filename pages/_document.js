@@ -26,6 +26,8 @@ export default class MyDocument extends Document {
             rel="stylesheet" 
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" 
           />
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+          <link href="/fonts/style.css" rel="stylesheet"/>
           <meta name="msapplication-TileColor" content="#2d89ef" />
           <meta name="theme-color" content="#ffffff" />
         </Head>

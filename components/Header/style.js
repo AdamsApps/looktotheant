@@ -1,21 +1,32 @@
 const styles = (theme) => ({
-  headerBg: {
-    backgroundImage: `url('/headertopbg.png')`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    position: 'relative',
-    zIndex: 10
-  },
+  // headerBg: {
+  //   backgroundImage: `url('/headertopbg.png')`,
+  //   backgroundPosition: 'center',
+  //   backgroundSize: 'cover',
+  //   position: 'relative',
+  //   zIndex: 10
+  // },
   header: {
+    zIndex: 10,
+    background: 'white',
     display: 'flex',
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
     '& .logo': {
-      width: 123
+      width: 300
     },
     '& img': {
       marginLeft: theme.spacing(2),
       display: 'block'
+    },
+    '& .company':{
+     // fontFamily: '',
+      flexDirection: 'column',
+      marginLeft: theme.spacing(2),
+      display: 'flex',
+      color: 'grey',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
     },
     '& .menu': {
       flex: 1,
@@ -24,9 +35,10 @@ const styles = (theme) => ({
       alignItems: 'center',
       marginRight: theme.spacing(2),
       '& a.menuLink': {
-        color: '#fff',
+        //color: theme.palette.primary.main,
+        color: 'grey',
         fontFamily: 'Raleway',
-        fontSize: 14,
+        fontSize: 18,
         fontWeight: 800,
         margin: theme.spacing(0, 4),
         textDecoration: 'none',

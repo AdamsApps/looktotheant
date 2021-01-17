@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
     <div>
       {layout.enabled___disabled && <SubHeader />}
       <Header />
+      {layout.enabled___disabled && <SubHeader />}
       {children}
       <Download />
       <NewsUpdate />

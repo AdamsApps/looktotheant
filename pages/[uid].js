@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Client } from '../prismic'
+import { Client } from '../prismic-example'
 import SliceZone from 'next-slicezone'
 import Head from '../components/Head'
 import { useGetStaticProps, useGetStaticPaths } from 'next-slicezone/hooks'

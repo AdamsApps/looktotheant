@@ -32,18 +32,18 @@ const HomepageHero = (props) => {
     <div className={classes.background} style={styles}>
       <div className={classes.backgroundOverlay}>
         <Grid container direction="column" justify="center" alignItems="center">
-          {primary.preTitle && (
+          {/* {primary.preTitle && (
             <Typography variant="subtitle1" className={classes.preTitle}>
               {RichText.asText(primary.preTitle)}
             </Typography>
-          )}
+          )} */}
           {primary.title1 && (
             <Typography variant="h1" className={classes.heroTitle}>
               {RichText.asText(primary.title1)}
             </Typography>
           )}
           {primary.title2 && (
-            <Typography variant="h1" className={classes.heroSubTitle}>
+            <Typography variant="h3" className={classes.heroSubTitle}>
               {RichText.asText(primary.title2)}
             </Typography>
           )}

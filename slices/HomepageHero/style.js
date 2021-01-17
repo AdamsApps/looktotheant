@@ -1,14 +1,17 @@
 const styles = (theme) => ({
   background: {
-    marginTop: '-114px',
+    //marginTop: '-114px',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     '& .MuiGrid-container': {
       height: '100%',
     },
   },
+  grid: {
+    
+  },
   backgroundOverlay: {
-    backgroundColor: 'rgba(0,0,0,0.2)',
+    backgroundColor: 'rgba(0,0,0,0.4)',
     height: 826,
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(20, 2),
@@ -16,6 +19,7 @@ const styles = (theme) => ({
     },
   },
   preTitle: {
+    marginTop: '-114px',
     backgroundColor: '#1c2834',
     padding: theme.spacing(0.5, 1),
     color: '#fff',
@@ -24,7 +28,11 @@ const styles = (theme) => ({
     textTransform: 'uppercase',
   },
   heroTitle: {
-    backgroundImage: `url('/homepage-title-background.png')`,
+    marginTop: '-150px',
+    //backgroundImage: `url('/homepage-title-background.png')`,
+    //background: 'rgb(65,150,203)',
+    //background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%)',
+    letterSpacing: 8,
     backgroundPosition: 'center',
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
@@ -40,7 +48,8 @@ const styles = (theme) => ({
     },
   },
   heroSubTitle: {
-    backgroundImage: `url('/homepage-subtitle-background.png')`,
+    letterSpacing: 8,
+    //backgroundImage: `url('/homepage-subtitle-background.png')`,
     backgroundPosition: 'center',
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',

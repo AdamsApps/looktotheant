@@ -12,9 +12,10 @@ const SubHeader = ({ classes }) => {
 
   return (
     <div className={classes.subHeader}>
-      <Typography>{RichText.asText(layout.announcement_bar_text)}</Typography>
-      <Button variant="outlined">{RichText.asText(layout.announcement_bar_button_text)}</Button>
+      {/* <Typography>{RichText.asText(layout.announcement_bar_text)}</Typography>
+      <Button variant="outlined">{RichText.asText(layout.announcement_bar_button_text)}</Button> */}
     </div>
+    
   )
 }
 

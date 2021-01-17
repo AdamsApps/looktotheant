@@ -1,10 +1,11 @@
 const styles = (theme) => ({
   subHeader: {
     display: 'flex',
-    padding: theme.spacing(1.5, 2),
+    //padding: theme.spacing(1.5, 2),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#254f72',
+    height: 15,
+    background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%);',
     color: '#fff',
     '& p': {
       fontSize: 12,

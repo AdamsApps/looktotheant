@@ -4,7 +4,7 @@ import { RichText } from 'prismic-reactjs'
 import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
 import { structuredTextPropTypes, imagePropTypes } from '../../utils/prop-types'
-import { linkResolver, hrefResolver } from '../../prismic'
+import { linkResolver, hrefResolver } from '../../prismic-example'
 import style from './style'
 import Link from 'next/link'
 

@@ -13,10 +13,11 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Drawer from '@material-ui/core/Drawer'
 import style from './style'
 import { useLayout } from '../../utils/layout-context'
-import { linkResolver, hrefResolver } from '../../prismic'
+import { linkResolver, hrefResolver } from '../../prismic-example'
 import CustomLink from '../CustomLink'
 import {useRouter} from 'next/router'
 import clsx from 'clsx'
+import Typography from '@material-ui/core/Typography'
 
 const Header = ({ classes }) => {
   const [open, setOpen] = React.useState(false)
@@ -37,10 +38,8 @@ const Header = ({ classes }) => {
   }
 
   return (
-    <div className={clsx({
-      [classes.headerBg]: !headerColor
-    })}>
       <Container className={classes.header}>
+  
         <Link href="/">
           <a>
             {headerColor ? (
@@ -50,6 +49,15 @@ const Header = ({ classes }) => {
             )}
           </a>
         </Link>
+        {/* <div className="company">
+        <Typography variant="subtitle1">
+               BETHANY SUPER
+        </Typography>
+      
+        <div variant="subtitle1">
+            PERSONAL TRAINING JERUSALEM
+         </div>
+        </div> */}
         <div className="menu">
           {layout.menu_items.map((menu_item, key) => (
             <Link 
@@ -57,7 +65,7 @@ const Header = ({ classes }) => {
               href={hrefResolver(menu_item.link)}
               key={key}>
               <a className={clsx('menuLink', {
-                'dark': headerColor
+                //'dark': headerColor
               })}>
                 {RichText.asText(menu_item.link_title)}
               </a>
@@ -100,8 +108,9 @@ const Header = ({ classes }) => {
             </Button>
           </CustomLink>
         </Drawer>
+        
       </Container>
-    </div>
+  
   )
 }
 

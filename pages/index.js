@@ -1,6 +1,6 @@
 export { default } from './[uid]'
 import { queryParams } from './[uid]'
-import { Client } from '../prismic'
+import { Client } from '../prismic-example'
 import { useGetStaticProps } from 'next-slicezone/hooks'
 import { fetchAdditionalData } from '../utils/fetch-additional-data'
 

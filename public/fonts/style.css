@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'nimbus_roman_no9_lbold';
+    src: url('NimbusRomNo9L-Med-webfont.eot');
+    src: url('NimbusRomNo9L-Med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('NimbusRomNo9L-Med-webfont.woff2') format('woff2'),
+         url('NimbusRomNo9L-Med-webfont.woff') format('woff'),
+         url('NimbusRomNo9L-Med-webfont.ttf') format('truetype'),
+         url('NimbusRomNo9L-Med-webfont.svg#nimbus_roman_no9_lbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nimbus_roman_no9_lregular';
+    src: url('NimbusRomNo9L-Reg-webfont.eot');
+    src: url('NimbusRomNo9L-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('NimbusRomNo9L-Reg-webfont.woff2') format('woff2'),
+         url('NimbusRomNo9L-Reg-webfont.woff') format('woff'),
+         url('NimbusRomNo9L-Reg-webfont.ttf') format('truetype'),
+         url('NimbusRomNo9L-Reg-webfont.svg#nimbus_roman_no9_lregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nimbus_roman_no9_lRgIt';
+    src: url('NimbusRomNo9L-RegIta-webfont.eot');
+    src: url('NimbusRomNo9L-RegIta-webfont.eot?#iefix') format('embedded-opentype'),
+         url('NimbusRomNo9L-RegIta-webfont.woff2') format('woff2'),
+         url('NimbusRomNo9L-RegIta-webfont.woff') format('woff'),
+         url('NimbusRomNo9L-RegIta-webfont.ttf') format('truetype'),
+         url('NimbusRomNo9L-RegIta-webfont.svg#nimbus_roman_no9_lRgIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

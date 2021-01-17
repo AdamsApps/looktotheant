@@ -2,38 +2,38 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 /* For use in material-ui/src/styles/colors.js */
 export const primary = {
-  50: '#f1f8ea',
-  100: '#ddedc9',
-  200: '#c6e1a6',
-  300: '#afd582',
-  400: '#9ecc67',
-  500: '#8dc34c',
-  600: '#85bd45',
-  700: '#7ab53c',
-  800: '#70ae33',
-  900: '#5da124',
-  A100: '#ecffde',
-  A200: '#cfffab',
-  A400: '#b2ff78',
-  A700: '#a4ff5e',
+  50: '#4196CB',
+  100: '#4196CB',
+  200: '#4196CB',
+  300: '#4196CB',
+  400: '#4196CB',
+  500: '#4196CB',
+  600: '#4196CB',
+  700: '#4196CB',
+  800: '#4196CB',
+  900: '#4196CB',
+  A100: '#4196CB',
+  A200: '#4196CB',
+  A400: '#4196CB',
+  A700: '#4196CB',
   contrastDefaultColor: 'dark',
 }
 
 export const secondary = {
-  50: '#e9f2f9',
-  100: '#c9def1',
-  200: '#a5c9e7',
-  300: '#80b3dd',
-  400: '#65a2d6',
-  500: '#4a92cf',
-  600: '#438aca',
-  700: '#3a7fc3',
-  800: '#3275bd',
-  900: '#2263b2',
-  A100: '#edf5ff',
-  A200: '#bad7ff',
-  A400: '#87baff',
-  A700: '#6eabff',
+  50: '#EBE2BC  ',
+  100: '#EBE2BC',
+  200: '#EBE2BC',
+  300: '#EBE2BC',
+  400: '#EBE2BC',
+  500: '#EBE2BC',
+  600: '#EBE2BC',
+  700: '#EBE2BC',
+  800: '#EBE2BC',
+  900: '#EBE2BC',
+  A100: '#EBE2BC',
+  A200: '#EBE2BC',
+  A400: '#EBE2BC',
+  A700: '#EBE2BC',
   contrastDefaultColor: 'dark',
 }
 
@@ -44,7 +44,8 @@ const { breakpoints } = defaultTheme
 const theme = createMuiTheme({
   ...defaultTheme,
   typography: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Poppins',
+    letterSpacing: 8
   },
   palette: {
     primary,
@@ -54,25 +55,26 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         body: {
-          fontFamily: 'Raleway,sans-serif',
+          fontFamily: 'Poppins',
           backgroundColor: '#fff',
         },
         h1: {
-          fontFamily: 'Raleway,sans-serif',
+          fontFamily: 'Poppins',
           fontSize: 48,
+          letterSpacing: 6
         },
         h2: {
-          fontFamily: 'Raleway,sans-serif',
-          fontSize: 31
+          fontFamily: 'Poppins',
+          fontSize: 31,
+          letterSpacing: 4
         },
         h4: {
-          fontFamily: 'Raleway,sans-serif',
+          fontFamily: 'Poppins',
           fontSize: 31,
-          color: primary[500],
-          margin: 0,
+          letterSpacing: 4
         },
         p: {
-          fontFamily: 'Raleway,sans-serif',
+          fontFamily: 'Poppins',
           fontSize: 18,
         },
         textarea: {
