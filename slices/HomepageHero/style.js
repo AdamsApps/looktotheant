@@ -12,7 +12,7 @@ const styles = (theme) => ({
     
   },
   backgroundOverlay: {
-    backgroundColor: 'rgba(0,0,0,0.4)',
+    backgroundColor: 'rgba(0,0,0,0.5)',
     height: 826,
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(20, 2),
