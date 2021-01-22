@@ -18,7 +18,7 @@ import CustomLink from '../CustomLink'
 import {useRouter} from 'next/router'
 import clsx from 'clsx'
 import Typography from '@material-ui/core/Typography'
-
+import Subheader from '../SubHeader'
 const Header = ({ classes }) => {
   const [open, setOpen] = React.useState(false)
   const {layout, headerColor} = useLayout()
@@ -38,6 +38,8 @@ const Header = ({ classes }) => {
   }
 
   return (
+    <div className={classes.sticky}>
+      <Subheader/>
       <Container className={classes.header}>
   
         <Link href="/">
@@ -110,7 +112,8 @@ const Header = ({ classes }) => {
         </Drawer>
         
       </Container>
-  
+      <Subheader/>
+      </div>
   )
 }
 

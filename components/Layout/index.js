@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import SubHeader from '../SubHeader'
 import Header from '../Header'
 import Download from '../Download'
 import NewsUpdate from '../NewsUpdate'
@@ -12,9 +11,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      {layout.enabled___disabled && <SubHeader />}
       <Header />
-      {layout.enabled___disabled && <SubHeader />}
       {children}
       <Download />
       <NewsUpdate />

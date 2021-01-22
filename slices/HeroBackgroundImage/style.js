@@ -27,11 +27,11 @@ const styles = (theme) => ({
   //   textAlign: 'center',
   //   textTransform: 'uppercase',
   // },
-  // boldText: {
-  //   color: '#fff',
-  //   textAlign: 'center',
-  //   marginBottom: theme.spacing(4),
-  // },
+  boldText: {
+    color: '#fff',
+    textAlign: 'center',
+    marginBottom: theme.spacing(4),
+  },
   heroButton: {
     display: 'flex',
     marginTop: theme.spacing(4),

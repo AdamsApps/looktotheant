@@ -34,7 +34,8 @@ const HeroBackgroundImage = ({ slice, classes }) => {
               </Typography>
             )}
             {primary.description && (
-              <Typography variant="subtitle2" className="boldText">
+              
+              <Typography variant="subtitle1" className="boldText">
                 {RichText.asText(primary.description)}
               </Typography>
             )}

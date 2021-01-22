@@ -6,8 +6,15 @@ const styles = (theme) => ({
   //   position: 'relative',
   //   zIndex: 10
   // },
+  sticky: {
+      position: 'sticky',
+      top:0,
+      zIndex: 100,
+      margin: 0,
+      width: '100%',
+      backgroundColor: 'white'
+  },
   header: {
-    zIndex: 10,
     background: 'white',
     display: 'flex',
     paddingTop: theme.spacing(1),

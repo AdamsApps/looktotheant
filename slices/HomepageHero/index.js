@@ -43,7 +43,7 @@ const HomepageHero = (props) => {
             </Typography>
           )}
           {primary.title2 && (
-            <Typography variant="h3" className={classes.heroSubTitle}>
+            <Typography variant="h2" className={classes.heroSubTitle}>
               {RichText.asText(primary.title2)}
             </Typography>
           )}

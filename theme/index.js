@@ -45,7 +45,7 @@ const theme = createMuiTheme({
   ...defaultTheme,
   typography: {
     fontFamily: 'Poppins',
-    letterSpacing: 8
+    letterSpacing: 2
   },
   palette: {
     primary,
@@ -60,18 +60,15 @@ const theme = createMuiTheme({
         },
         h1: {
           fontFamily: 'Poppins',
-          fontSize: 48,
-          letterSpacing: 6
+          fontSize: 48
         },
         h2: {
           fontFamily: 'Poppins',
-          fontSize: 31,
-          letterSpacing: 4
+          fontSize: 31
         },
         h4: {
           fontFamily: 'Poppins',
-          fontSize: 31,
-          letterSpacing: 4
+          fontSize: 3
         },
         p: {
           fontFamily: 'Poppins',
@@ -121,7 +118,7 @@ const theme = createMuiTheme({
         },
       },
       subtitle1: {
-        fontSize: 18,
+        fontSize: 22,
         fontWeight: 900,
         letterSpacing: 1.24,
       },
@@ -129,11 +126,7 @@ const theme = createMuiTheme({
         fontSize: 16,
         fontWeight: 900,
         letterSpacing: 1.1,
-      },
-      subtitle3: {
-        fontSize: 14,
-        letterSpacing: 1.1,
-      },
+      }
     },
     MuiButton: {
       root: {

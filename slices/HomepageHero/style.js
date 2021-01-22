@@ -1,6 +1,7 @@
 const styles = (theme) => ({
   background: {
-    //marginTop: '-114px',
+    marginTop: '-114px',
+    marginBottom: '-114px',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     '& .MuiGrid-container': {
@@ -32,7 +33,6 @@ const styles = (theme) => ({
     //backgroundImage: `url('/homepage-title-background.png')`,
     //background: 'rgb(65,150,203)',
     //background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%)',
-    letterSpacing: 8,
     backgroundPosition: 'center',
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
@@ -48,13 +48,13 @@ const styles = (theme) => ({
     },
   },
   heroSubTitle: {
-    letterSpacing: 8,
+    letterSpacing: 1,
     //backgroundImage: `url('/homepage-subtitle-background.png')`,
     backgroundPosition: 'center',
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
     width: 'fit-content',
-    padding: '20px 31px',
+    padding: '20px 120px',
     color: '#fff',
     textAlign: 'center',
     marginBottom: theme.spacing(4),
