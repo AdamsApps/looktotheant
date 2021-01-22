@@ -1,12 +1,11 @@
 const styles = (theme) => ({
   footer: {
-    backgroundColor: '#242440',
+    background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%);',
   },
   footerTop: {
     display: 'flex',
-    paddingTop: theme.spacing(6),
-    borderBottom: '1px solid rgba(80, 77, 109, 0.2)',
-    paddingBottom: theme.spacing(6),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       paddingTop: theme.spacing(5),
       paddingBottom: theme.spacing(5),

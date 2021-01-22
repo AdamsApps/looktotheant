@@ -24,9 +24,9 @@ const Footer = ({ classes }) => {
             justify="center"
             alignItems="center"
           >
-            <Grid item xs={12} container justify="center" alignItems="center">
+            {/* <Grid item xs={12} container justify="center" alignItems="center">
               <Typography className="footerTitle">{RichText.asText(layout.engage_title)}</Typography>
-            </Grid>
+            </Grid> */}
             <Grid item xs={12} spacing={4} container justify="center" alignItems="center">
               {layout.social_media_links.map((social, index) => {
                 return (<Grid item key={index}><CustomLink link={social.social_media_link}><img className="socialIcon" src={social.social_media_icon.url} /></CustomLink></Grid>)

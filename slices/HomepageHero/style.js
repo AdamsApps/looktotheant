@@ -1,7 +1,7 @@
 const styles = (theme) => ({
   background: {
-    marginTop: '-114px',
-    marginBottom: '-114px',
+   // marginTop: '-114px',
+    //marginBottom: '-114px',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     '& .MuiGrid-container': {

@@ -3,30 +3,34 @@ import { array, shape } from 'prop-types';
 import { RichText } from 'prismic-reactjs';
 import Grid from '@material-ui/core/Grid'
 import { Container, Typography } from '@material-ui/core'
+import style from './style'
+import { withStyles } from '@material-ui/core/styles'
 
-const MySlice = ({ slice }) => (
+const AboutHome = ({ slice, classes }) => (
+<Container className={classes.container}>
 
-    <Container>
-      <Grid container spacing={4} className="linksSections">
-        <Grid item xs={12} sm={4} md={4} container direction="column">
-          {slice.primary.image && <img src={slice.primary.image.url}/>}
-        </Grid>
-        <Grid item xs={12} sm={8} md={8} container direction="column">
-          {
-            slice.primary.title &&
-              <RichText render={slice.primary.title} />
-          }
-           {
-            slice.primary.description &&
-              <RichText render={slice.primary.description} />
-          }
-        </Grid>
-        
+    <Grid className={classes.grid} container spacing={10}>
+      <Grid item xs={12} sm={12} md={5} container direction="column">
+        {slice.primary.image && <img className={classes.image} src={slice.primary.image.url}/>}
       </Grid>
+      <Grid item xs={12} sm={12} md={7} container direction="column">
+        {
+          slice.primary.title &&
+            <RichText render={slice.primary.title} />
+        }
+         <div className={classes.line}></div>
+
+         {
+          slice.primary.description &&
+            <RichText render={slice.primary.description} />
+        }
+      </Grid>
+
+    </Grid>
     </Container>
 );
 
-MySlice.propTypes = {
+AboutHome.propTypes = {
   slice: shape({
     primary: shape({
       title: array.isRequired,
@@ -34,4 +38,4 @@ MySlice.propTypes = {
   }).isRequired,
 };
 
-export default MySlice;
+export default withStyles(style)(AboutHome)
