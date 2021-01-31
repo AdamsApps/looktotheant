@@ -47,10 +47,10 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
       <Dialog  open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <div style={{padding: 10}}>
         <form onSubmit={handleSubmit} id="contact-form" name="contact" method="POST">
-        <DialogTitle className={classes.title} id="form-dialog-title">Contact Me</DialogTitle>
+        <DialogTitle className={classes.title} id="form-dialog-title">Contact Us</DialogTitle>
         <DialogContent >
           <DialogContentText>
-            Enter your details and I will get back to you ASAP!
+            Enter your details and we will get back to you ASAP!
           </DialogContentText>
           <TextField
             inputRef={name}
