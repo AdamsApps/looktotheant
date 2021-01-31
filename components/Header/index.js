@@ -39,6 +39,9 @@ const Header = ({ classes }) => {
     setOpen(false)
   }
 
+
+  console.log("layout.menu_items",layout.menu_items)
+
   return (
     <div className={classes.sticky}>
       <Subheader/>
@@ -54,18 +57,21 @@ const Header = ({ classes }) => {
           </a>
         </Link>
         <div className="menu">
-          {layout.menu_items.map((menu_item, key) => (
+          {
+          layout.menu_items.map((menu_item, key) =>   (
             <Link 
-              as={linkResolver(menu_item.link)}
-              href={hrefResolver(menu_item.link)}
+              as={key === 0 ? "#about" : "#services"}
+              href={key === 0 ? "#about" : "#services"}
               key={key}>
-              <a className={clsx('menuLink', {
+              <a href="#about" className={clsx('menuLink', {
                 //'dark': headerColor
               })}>
                 {RichText.asText(menu_item.link_title)}
               </a>
             </Link>
-          ))}
+          ))
+          
+          }
           <ContactMeButton {...{size:"small", text:RichText.asText(layout.give_button_text)}}></ContactMeButton>
         </div>
         <div className="mobileMenu">

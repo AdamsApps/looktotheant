@@ -50,8 +50,8 @@ const HomepageHero = (props) => {
           )}
           <div className={classes.heroButton}>
             <ContactMeButton text= {RichText.asText(primary.primaryCtaButtonText)}></ContactMeButton>
-            {!primary.secondaryButtonType &&
-              <CustomLink link={primary.primaryCtaButtonLink}>
+            {/* {!primary.secondaryButtonType &&
+              <CustomLink link={"#services"}>
                 <Button variant="outlined">
                   {RichText.asText(primary.secondaryCtaButtonText)}
                 </Button>
@@ -61,7 +61,7 @@ const HomepageHero = (props) => {
               <Button variant="outlined" onClick={openVideoDialog}>
                 {RichText.asText(primary.secondaryCtaButtonText)}
               </Button>
-            }
+            } */}
           </div>
         </Grid>
       </div>

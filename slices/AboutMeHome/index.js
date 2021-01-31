@@ -7,6 +7,11 @@ import style from './style'
 import { withStyles } from '@material-ui/core/styles'
 
 const AboutHome = ({ slice, classes }) => (
+  <div>
+    <a name="about">
+      
+    </a>
+
 <Container className={classes.container}>
 
     <Grid className={classes.grid} container spacing={10}>
@@ -28,6 +33,7 @@ const AboutHome = ({ slice, classes }) => (
 
     </Grid>
     </Container>
+    </div>
 );
 
 AboutHome.propTypes = {

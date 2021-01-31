@@ -17,7 +17,9 @@ const renderItem = (text, index)=> {
 const OurServices = ({ slice, classes }) => (
 
   <Grid container direction="column" className={classes.container}>
-    
+    <a name="services">
+      
+      </a>    
       <h2 className={classes.title}>{slice.primary.title}</h2>
     <Grid justify="center" spacing={5} container item xs={12} sm={12} md={12} direction="row">
       <Grid item>

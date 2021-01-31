@@ -25,7 +25,6 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
       let myForm = document.getElementById('contact-form');
       let formData = new FormData(myForm)
       let encoded = new URLSearchParams(formData).toString()
-      console.log("formData",encoded)
       
       fetch('/', {
         method: 'POST',
