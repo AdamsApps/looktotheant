@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "buildForNetlify": "next build && next export",
     "start": "next start",
     "slicemachine": "start-slicemachine --port 9999",
     "storybook": "start-storybook -s ./public -p 8888",
