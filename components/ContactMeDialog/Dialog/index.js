@@ -47,7 +47,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
 
       <Dialog  open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <div style={{padding: 10}}>
-        <form onSubmit={handleSubmit} id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="honeypot-field">
+        <form onSubmit={handleSubmit} id="contact-form" name="contact" method="POST" netlify data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="honeypot-field">
         <DialogTitle className={classes.title} id="form-dialog-title">Contact Me</DialogTitle>
         <DialogContent >
           <DialogContentText>
