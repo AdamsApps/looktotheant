@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import useMediaQuery from '../../utils/media-query'
 
 const renderItem = (text, index)=> {
-  return <Grid spacing={3}  alignItems="center" item key={index} container direction="row">
+  return <Grid spacing={3} alignItems="center" item key={index} container direction="row">
                           <Grid item><FontAwesomeIcon size="lg" icon={['far', 'check-square']} /></Grid>
                           <Grid item><h3>{text}</h3></Grid>
                    </Grid>
@@ -59,7 +59,7 @@ const OurServices = ({ slice, classes }) =>  {
     {
       
         isPageSmall && 
-        <Grid justify="center" spacing={5} container item xs={12} sm={12} md={12} direction="row">
+        <Grid justify="center" alignItems="center" spacing={5} container item xs={12} sm={12} md={12} direction="column">
         <Grid>
           {
               slice.items.map((field,index) => {
