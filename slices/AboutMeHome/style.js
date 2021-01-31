@@ -7,6 +7,7 @@ const styles = (theme) => ({
     //backgroundColor: 'blue',
     alignItems: "flex-start",
     "& h1": {
+      color: "#5D5E60",
       marginTop: 0,
       verticalAlign: "text-top",
       lineHeight: '48px'

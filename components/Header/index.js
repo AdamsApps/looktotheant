@@ -19,6 +19,8 @@ import {useRouter} from 'next/router'
 import clsx from 'clsx'
 import Typography from '@material-ui/core/Typography'
 import Subheader from '../SubHeader'
+import ContactMeButton from '../ContactMeDialog/Button'
+
 const Header = ({ classes }) => {
   const [open, setOpen] = React.useState(false)
   const {layout, headerColor} = useLayout()
@@ -51,15 +53,6 @@ const Header = ({ classes }) => {
             )}
           </a>
         </Link>
-        {/* <div className="company">
-        <Typography variant="subtitle1">
-               BETHANY SUPER
-        </Typography>
-      
-        <div variant="subtitle1">
-            PERSONAL TRAINING JERUSALEM
-         </div>
-        </div> */}
         <div className="menu">
           {layout.menu_items.map((menu_item, key) => (
             <Link 
@@ -73,11 +66,7 @@ const Header = ({ classes }) => {
               </a>
             </Link>
           ))}
-          <CustomLink link={layout.give_button_link}>
-            <Button variant="contained" color="primary" size="small">
-              {RichText.asText(layout.give_button_text)}
-            </Button>
-          </CustomLink>
+          <ContactMeButton {...{size:"small", text:RichText.asText(layout.give_button_text)}}></ContactMeButton>
         </div>
         <div className="mobileMenu">
           <IconButton

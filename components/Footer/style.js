@@ -1,11 +1,14 @@
 const styles = (theme) => ({
-  footer: {
-    background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%);',
+  icon: {
+    color: "white",
+    textAlign: "center"
   },
-  footerTop: {
+  footer: {
+    justify: "center",
+    alignItems: "center",
+    background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%);',
+    padding: theme.spacing(2),
     display: 'flex',
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       paddingTop: theme.spacing(5),
       paddingBottom: theme.spacing(5),
@@ -14,102 +17,34 @@ const styles = (theme) => ({
       paddingTop: theme.spacing(4),
       paddingBottom: theme.spacing(4),
     },
-    '& .socialIcon': {
-
-    },
-    '& .linksSections': {
-      marginTop: 40
-    },
-    '& .footerTitle': {
-      fontFamily: 'Raleway',
-      fontSize: 36,
-      fontWeight: 900,
-      textAlign: 'center',
-      color: '#ffffff',
-      textTransform: 'uppercase'
-    },
     '& .title': {
+      marginBottom: 16,
+      textAlign: "center",
       color: '#ffffff',
       textTransform: 'uppercase',
-      marginBottom: theme.spacing(1),
       fontWeight: 700,
-      fontSize: 16,
+      fontSize: 20,
       [theme.breakpoints.down('xs')]: {
         textAlign: 'center',
       },
     },
     '& .address p': {
-      marginTop: 8,
-      marginBottom: 8,
+      textAlign: "center",
       color: '#ffffff',
-      fontSize: 14,
+      fontSize: 16,
       fontWeight: 500,
       [theme.breakpoints.down('xs')]: {
         textAlign: 'center',
       },
     },
     '& .logoImg': {
-      width: 123,
-      marginTop: 68,
+      textAlign: "center",
+      width: 100,
       [theme.breakpoints.down('xs')]: {
         margin: '16px auto 16px',
       },
-    },
-    '& a': {
-      color: '#ffffff',
-      fontFamily: 'Raleway',
-      margin: theme.spacing(1, 0),
-      fontSize: 14,
-      fontWeight: 500,
-      textTransform: 'uppercase',
-      [theme.breakpoints.down('xs')]: {
-        textAlign: 'center',
-      },
     }
-  },
-  footerBottom: {
-    padding: theme.spacing(6, 2),
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      padding: theme.spacing(5, 2),
-    },
-    [theme.breakpoints.down('xs')]: {
-      padding: theme.spacing(4, 2),
-    },
-    '& .input': {
-      width: 332,
-      borderRadius: 6,
-      backgroundColor: '#34345a',
-      marginBottom: theme.spacing(3.5),
-      [theme.breakpoints.down('xs')]: {
-        width: '100%',
-      },
-      '& input': {
-        fontSize: 12,
-        fontWeight: 500,
-        color: '#89899d',
-      },
-      '& fieldset': {
-        border: 0,
-      },
-      '& svg': {
-        color: '#fff',
-        borderRadius: 6,
-        backgroundColor: '#4a92cf',
-      },
-    },
-    '& .footerBottomLink': {
-      textDecoration: 'none',
-      '& .footerBottomTxt': {
-        color: '#fff',
-        fontFamily: 'Raleway',
-        fontSize: 12,
-      },
-    }
-  },
+  }
 })
 
 export default styles

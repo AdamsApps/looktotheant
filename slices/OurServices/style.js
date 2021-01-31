@@ -2,7 +2,7 @@ const styles = (theme) => ({
   container: {
     backgroundColor: "#dddddd80",
     paddingTop: 40,
-    paddingBottom: 65,
+    paddingBottom: 75,
     justify: "center",
     alignItems: "center"
   },

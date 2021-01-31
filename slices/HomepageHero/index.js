@@ -9,6 +9,7 @@ import style from './style'
 import CustomLink from '../../components/CustomLink'
 import VideoModal from '../../components/VideoModal'
 import { structuredTextPropTypes, imagePropTypes } from '../../utils/prop-types'
+import ContactMeButton from '../../components/ContactMeDialog/Button'
 
 const HomepageHero = (props) => {
   const { slice, classes } = props
@@ -47,35 +48,8 @@ const HomepageHero = (props) => {
               {RichText.asText(primary.title2)}
             </Typography>
           )}
-          <div className={classes.pointsWrapper}>
-            {primary.point1 && (
-              <Typography variant="subtitle2">
-                {RichText.asText(primary.point1)}
-              </Typography>
-            )}
-            {primary.point2 && (
-              <>
-                <div className="bulletPoint" />
-                <Typography variant="subtitle2">
-                  {RichText.asText(primary.point2)}
-                </Typography>
-              </>
-            )}
-            {primary.point3 && (
-              <>
-                <div className="bulletPoint" />
-                <Typography variant="subtitle2">
-                  {RichText.asText(primary.point3)}
-                </Typography>
-              </>
-            )}
-          </div>
           <div className={classes.heroButton}>
-            <CustomLink link={primary.primaryCtaButtonLink}>
-              <Button variant="contained" color="primary">
-                {RichText.asText(primary.primaryCtaButtonText)}
-              </Button>
-            </CustomLink>
+            <ContactMeButton text= {RichText.asText(primary.primaryCtaButtonText)}></ContactMeButton>
             {!primary.secondaryButtonType &&
               <CustomLink link={primary.primaryCtaButtonLink}>
                 <Button variant="outlined">

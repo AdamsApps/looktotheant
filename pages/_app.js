@@ -9,9 +9,9 @@ import { LayoutProvider } from '../utils/layout-context';
 import Layout from '../components/Layout'
 import theme from '../theme'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheckSquare } from '@fortawesome/free-regular-svg-icons'
-
-library.add(faCheckSquare)
+import { faCheckSquare,faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+library.add(faCheckSquare,faEnvelope,faPhone)
 
 export default function MyApp(appProps) {
   const { Component, pageProps, props } = appProps;
