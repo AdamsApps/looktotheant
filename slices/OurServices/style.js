@@ -1,6 +1,6 @@
 const styles = (theme) => ({
   container: {
-    backgroundColor: "#F6F6F6",
+    backgroundColor: "#dddddd80",
     paddingTop: 40,
     paddingBottom: 65,
     justify: "center",
