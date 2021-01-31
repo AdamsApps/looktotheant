@@ -22,14 +22,15 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
 
       event.preventDefault()
 
-      let myForm = document.getElementById('contact');
+      let myForm = document.getElementById('contact-form');
       let formData = new FormData(myForm)
-
-      console.log("formData",new URLSearchParams(formData).toString())
+      let encoded = new URLSearchParams(formData).toString()
+      console.log("formData",encoded)
+      
       fetch('/', {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
+        body: encoded
       }).then(() => {
         console.log('Form successfully submitted')
         handleClose()
@@ -46,21 +47,18 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
 
       <Dialog  open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <div style={{padding: 10}}>
-        <form onSubmit={handleSubmit} id="contact" name="contact" method="POST">
+        <form onSubmit={handleSubmit} id="contact-form" name="contact" method="POST">
         <DialogTitle className={classes.title} id="form-dialog-title">Contact Me</DialogTitle>
         <DialogContent >
           <DialogContentText>
             Enter your details and I will get back to you ASAP!
           </DialogContentText>
-          <p className={classes.hidden}>
-            <label>Don’t fill this out if you’re human: <input name="honeypot-field" /></label>
-          </p>
           <TextField
             inputRef={name}
             autoFocus
             margin="dense"
-            id="name"
-            name="name"
+            id="moniker"
+            name="moniker"
             label="Name"
             type="text"
             fullWidth

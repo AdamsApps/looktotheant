@@ -31,8 +31,8 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <body>
-          <form name="contact" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="honeypot-field" hidden>
-            <input type="text" name="name" />
+          <form name="contact" data-netlify="true" hidden>
+            <input type="text" name="moniker" />
             <input type="email" name="email" />
             <input type="text" name="phone"/>
             <input type="text" name="message"/>
