@@ -12,32 +12,20 @@
       "description": "OurServices",
       "primary": {
         "title": {
-          "type": "StructuredText",
           "config": {
-            "single": "heading1",
             "label": "Title",
-            "placeholder": "This is where it all begins..."
-          }
-        },
-        "description": {
-          "config": {
-            "label": "Description",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,rtl"
+            "placeholder": ""
           },
-          "type": "StructuredText"
+          "type": "Text"
         }
       },
       "items": {
         "service": {
           "config": {
             "label": "Service Name",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading1,heading2,heading3,heading4"
+            "placeholder": "Service Name"
           },
-          "type": "StructuredText"
+          "type": "Text"
         }
       }
     }

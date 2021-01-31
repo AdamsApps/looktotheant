@@ -7,8 +7,11 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { Client } from "../prismic-example";
 import { LayoutProvider } from '../utils/layout-context';
 import Layout from '../components/Layout'
-
 import theme from '../theme'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCheckSquare } from '@fortawesome/free-regular-svg-icons'
+
+library.add(faCheckSquare)
 
 export default function MyApp(appProps) {
   const { Component, pageProps, props } = appProps;
