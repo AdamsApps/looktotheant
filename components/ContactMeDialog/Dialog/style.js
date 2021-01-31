@@ -14,6 +14,9 @@ const styles = (theme) => ({
       fontSize: 60,
       textTransform: 'uppercase',
       fontWeight: 700,
+    },
+    hidden: {
+      display: "none"
     }
   })
   

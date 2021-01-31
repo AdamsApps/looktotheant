@@ -8,7 +8,6 @@ import Button from '@material-ui/core/Button'
 
 const ContactMeButton = ({classes,text,size}) => {
 
-    console.log("text",text,"classes",classes)
     const {layout} = useLayout()
 
     const [open, setOpen] = React.useState(false);

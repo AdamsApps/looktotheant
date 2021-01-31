@@ -19,6 +19,21 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
     const message = useRef('');
 
 
+    const handleSubmit = (event)=> {
+
+      event.preventDefault()
+
+      let myForm = document.getElementById('contact-form');
+      let formData = new FormData(myForm)
+
+      console.log("formData",new URLSearchParams(formData).toString())
+      fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      }).then(() => console.log('Form successfully submitted')).catch((error) =>
+        alert(error))
+    }
 
     const handleClose = () => {
       console.log(name.current?.value,email.current?.value,phone.current?.value,message.current?.value)
@@ -29,16 +44,21 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
 
       <Dialog  open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <div style={{padding: 10}}>
+        <form onSubmit={handleSubmit} id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="honeypot-field">
         <DialogTitle className={classes.title} id="form-dialog-title">Contact Me</DialogTitle>
         <DialogContent >
           <DialogContentText>
             Enter your details and I will get back to you ASAP!
           </DialogContentText>
+          <p className={classes.hidden}>
+            <label>Don’t fill this out if you’re human: <input name="honeypot-field" /></label>
+          </p>
           <TextField
             inputRef={name}
             autoFocus
             margin="dense"
             id="name"
+            name="name"
             label="Name"
             type="text"
             fullWidth
@@ -47,6 +67,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
             inputRef={email}
             margin="dense"
             id="email"
+            name="email"
             label="Email"
             type="email"
             fullWidth
@@ -55,6 +76,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
           inputRef={phone}
             margin="dense"
             id="phone"
+            name="phone"
             label="Phone Number"
             type="text"
             fullWidth
@@ -63,18 +85,21 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
           inputRef={message}
             margin="dense"
             id="message"
+            name="message"
             label="Message"
             type="text"
             fullWidth
             multiline
             rowsMax={4}
           />
+          <div data-netlify-recaptcha="true"></div>
         </DialogContent>
         <DialogActions style={{padding: 24}}>
-          <Button onClick={handleClose} variant="contained" color="primary">
+          <Button type="submit" variant="contained" color="primary">
             SUBMIT
           </Button>
         </DialogActions>
+        </form>
         </div>
         
       </Dialog>
