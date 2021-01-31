@@ -7,10 +7,12 @@ import Footer from '../Footer'
 import { useLayout } from '../../utils/layout-context';
 
 const Layout = ({ children }) => {
+
+
   const { layout } = useLayout();
 
   return (
-    <div>
+    <div style={{width: '100%', overflowX:"hidden", overflowY: "hidden"}}>
       <Header />
       {children}
       {/* <Download />

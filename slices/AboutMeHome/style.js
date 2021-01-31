@@ -14,8 +14,8 @@ const styles = (theme) => ({
     }
   },
     image: {
-     width: 400,
-     height: 400,
+     width: 300,
+     height: 300,
      padding: 0,
      boxShadow: '0 20px 40px rgb(0 0 0 / 30%);'
     },

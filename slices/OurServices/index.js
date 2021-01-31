@@ -6,26 +6,38 @@ import { Container, Typography } from '@material-ui/core'
 import style from './style'
 import { withStyles } from '@material-ui/core/styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import useMediaQuery from '../../utils/media-query'
 
 const renderItem = (text, index)=> {
-  return <Grid spacing={3} justify="flex-start" alignItems="center" item key={index} container direction="row">
+  return <Grid spacing={3}  alignItems="center" item key={index} container direction="row">
                           <Grid item><FontAwesomeIcon size="lg" icon={['far', 'check-square']} /></Grid>
                           <Grid item><h3>{text}</h3></Grid>
                    </Grid>
 }
 
-const OurServices = ({ slice, classes }) => (
+const OurServices = ({ slice, classes }) =>  { 
+  
+  
+  let isPageSmall = useMediaQuery('(max-width: 600px)')
+  
+  
+  return (
 
   <Grid container direction="column" className={classes.container}>
     <a name="services">
       
       </a>    
       <h2 className={classes.title}>{slice.primary.title}</h2>
-    <Grid justify="center" spacing={5} container item xs={12} sm={12} md={12} direction="row">
+    
+
+{
+  
+!isPageSmall &&
+<Grid justify="center" spacing={5} container item xs={12} sm={12} md={12} direction="row">
       <Grid item>
       {
            slice.items.map((field,index) => {
-                  return index < 4 ?  
+                  return !isPageSmall && index < 4 ?  
                   renderItem(field.service,index)
                    : ""
            })
@@ -34,16 +46,32 @@ const OurServices = ({ slice, classes }) => (
         <Grid item>
         {
            slice.items.map((field,index) => {
-            return index > 3 ?  
+            return !isPageSmall && index > 3 ?  
             renderItem(field.service,index)
              : ""
            })
          }
         </Grid>
+        
        
     </Grid>
+}
+    {
+      
+        isPageSmall && 
+        <Grid justify="center" spacing={5} container item xs={12} sm={12} md={12} direction="row">
+        <Grid>
+          {
+              slice.items.map((field,index) => {
+                return renderItem(field.service,index)
+              })
+          }
+        </Grid>
+        </Grid>
+      
+    }
   </Grid>
-);
+)};
 
 OurServices.propTypes = {
   slice: shape({

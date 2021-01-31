@@ -35,7 +35,9 @@ const Header = ({ classes }) => {
   }
 
   const clickItem = (link) => {
-    router.push(hrefResolver(link), linkResolver(link))
+    //router.push(hrefResolver("#about"), linkResolver("#about"))
+    //console.log("mobile menu")
+    location.href = link;
     setOpen(false)
   }
 
@@ -93,7 +95,7 @@ const Header = ({ classes }) => {
         >
           <List className="list">
             {layout.menu_items.map((menu_item, index) => (
-              <ListItem button key={index} className="listItem" onClick={() => clickItem(menu_item.link)}>
+              <ListItem button key={index} className="listItem" onClick={() => clickItem(index === 0 ? "#about" : "#services")}>
                 <ListItemText primary={RichText.asText(menu_item.link_title)} />
               </ListItem>
             ))}
