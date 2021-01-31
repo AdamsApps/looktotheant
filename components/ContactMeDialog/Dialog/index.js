@@ -18,6 +18,11 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
     const phone = useRef('');
     const message = useRef('');
 
+    const encode = (data) => {
+      return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&");
+    }
 
     const handleSubmit = (event)=> {
 
@@ -47,7 +52,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
 
       <Dialog  open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <div style={{padding: 10}}>
-        <form onSubmit={handleSubmit} id="contact" name="contact" method="POST" data-netlify="true" netlify-honeypot="honeypot-field">
+        <form onSubmit={handleSubmit} id="contact" name="contact" method="POST">
         <DialogTitle className={classes.title} id="form-dialog-title">Contact Me</DialogTitle>
         <DialogContent >
           <DialogContentText>
