@@ -31,7 +31,10 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
-      }).then(() => console.log('Form successfully submitted')).catch((error) =>
+      }).then(() => {
+        console.log('Form successfully submitted')
+        handleClose()
+      }).catch((error) =>
         alert(error))
     }
 
@@ -92,6 +95,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
             multiline
             rowsMax={4}
           />
+          <input type="hidden" name="form-name" value="contact" />
           <div data-netlify-recaptcha="true"></div>
         </DialogContent>
         <DialogActions style={{padding: 24}}>
