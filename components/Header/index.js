@@ -39,7 +39,6 @@ const Header = ({ classes }) => {
     setOpen(false)
   }
 
-
   console.log("layout.menu_items",layout.menu_items)
 
   return (

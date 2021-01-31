@@ -30,12 +30,24 @@ const Footer = ({ classes }) => {
               
                 {layout.contact_details.map((contact, index) => {
 
-                  let font = index === 0 ? "far" :"fas"
-                  let icon = index === 0 ? "envelope" :"phone"
+                  let font;
+                  let icon;
+                  let href;
+                  if (index === 0){
+                      font = "far"
+                      icon = "envelope"
+                      href= `mailto:${RichText.asText(contact.contact_details1)}`
+                  }else {
+                      font = "fas"
+                      icon = "phone"
+                    
+                      href=`tel:${RichText.asText(contact.contact_details1)}`
+                  }
+      
 
                   return (<div className={classes.icon} key={index}>
                     <FontAwesomeIcon  size="lg" icon={[font, icon]} />
-                    {RichText.render(contact.contact_details1)}
+                    <a className={classes.bareLink} href={href}>{RichText.render(contact.contact_details1)}</a>
                     </div>)
                 })}
               </div>

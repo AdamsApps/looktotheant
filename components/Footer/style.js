@@ -3,6 +3,9 @@ const styles = (theme) => ({
     color: "white",
     textAlign: "center"
   },
+  bareLink: {
+textDecoration: "none"
+  },
   footer: {
     justify: "center",
     alignItems: "center",
