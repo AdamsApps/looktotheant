@@ -23,7 +23,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
 
       event.preventDefault()
 
-      let myForm = document.getElementById('contact-form');
+      let myForm = document.getElementById('contact');
       let formData = new FormData(myForm)
 
       console.log("formData",new URLSearchParams(formData).toString())
@@ -47,7 +47,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
 
       <Dialog  open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <div style={{padding: 10}}>
-        <form onSubmit={handleSubmit} id="contact-form" name="contact" method="POST" netlify data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="honeypot-field">
+        <form onSubmit={handleSubmit} id="contact" name="contact" method="POST" data-netlify="true" netlify-honeypot="honeypot-field">
         <DialogTitle className={classes.title} id="form-dialog-title">Contact Me</DialogTitle>
         <DialogContent >
           <DialogContentText>
@@ -96,7 +96,6 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
             rowsMax={4}
           />
           <input type="hidden" name="form-name" value="contact" />
-          <div data-netlify-recaptcha="true"></div>
         </DialogContent>
         <DialogActions style={{padding: 24}}>
           <Button type="submit" variant="contained" color="primary">
