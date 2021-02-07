@@ -11,11 +11,16 @@ import VideoModal from '../../components/VideoModal'
 import { structuredTextPropTypes, imagePropTypes } from '../../utils/prop-types'
 import ContactMeButton from '../../components/ContactMeDialog/Button'
 
+import Slider from "react-slick";
+import "../../node_modules/slick-carousel/slick/slick.css"
+import "../../node_modules/slick-carousel/slick/slick-theme.css"
+
 const HomepageHero = (props) => {
   const { slice, classes } = props
   const { primary } = slice
   const [openModal, setOpenModal] = useState(false)
 
+  console.log("slice",slice)
   const styles = {}
   if (primary.backgroundImage) {
     styles.backgroundImage = `url(${primary.backgroundImage.url})`
@@ -29,39 +34,42 @@ const HomepageHero = (props) => {
     setOpenModal(false)
   }
 
+  const settings = {
+    autoplay: true,
+    dots: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 500,
+      autoplaySpeed: 5000,
+      cssEase: "ease-in",
+      centerMode: true,
+      //fade: true
+  }
+
   return (
     <div className={classes.background} style={styles}>
       <div className={classes.backgroundOverlay}>
-        <Grid container direction="column" justify="center" alignItems="center">
-          {/* {primary.preTitle && (
-            <Typography variant="subtitle1" className={classes.preTitle}>
-              {RichText.asText(primary.preTitle)}
-            </Typography>
-          )} */}
-          {primary.title1 && (
-            <Typography variant="h1" className={classes.heroTitle}>
-              {RichText.asText(primary.title1)}
-            </Typography>
-          )}
-          {primary.title2 && (
-            <Typography variant="h2" className={classes.heroSubTitle}>
-              {RichText.asText(primary.title2)}
-            </Typography>
-          )}
+        <Grid  container direction="column" justify="center" alignItems="center">
+        <Grid style={{width: '100%'}} item>
+          <Slider {...settings}>
+                {slice.items.map((x, i) =>
+                  <div key={i}>
+                    <Typography variant="h2" className={classes.heroTitle}>
+                      {RichText.asText(x.title)}
+                    </Typography>
+                    <Typography variant="h4" className={classes.heroSubTitle}>
+                      {RichText.asText(x.subtitle)}
+                    </Typography>
+                </div>
+                )}
+            
+            </Slider>
+        </Grid>
+       
           <div className={classes.heroButton}>
             <ContactMeButton text= {RichText.asText(primary.primaryCtaButtonText)}></ContactMeButton>
-            {/* {!primary.secondaryButtonType &&
-              <CustomLink link={"#services"}>
-                <Button variant="outlined">
-                  {RichText.asText(primary.secondaryCtaButtonText)}
-                </Button>
-              </CustomLink>
-            }
-            {primary.secondaryButtonType &&
-              <Button variant="outlined" onClick={openVideoDialog}>
-                {RichText.asText(primary.secondaryCtaButtonText)}
-              </Button>
-            } */}
           </div>
         </Grid>
       </div>

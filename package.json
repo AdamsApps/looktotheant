@@ -28,7 +28,9 @@
     "prismic-reactjs": "^1.3.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-player": "^2.7.0"
+    "react-player": "^2.7.0",
+    "react-slick": "^0.28.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.1.1",

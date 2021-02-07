@@ -9,7 +9,9 @@ const styles = (theme) => ({
     },
   },
   grid: {
-    
+    alignItems: "center",
+    justifyContent:"center",
+    backgroundColor: "red"
   },
   backgroundOverlay: {
     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -29,14 +31,14 @@ const styles = (theme) => ({
     textTransform: 'uppercase',
   },
   heroTitle: {
-    marginTop: '-150px',
+    //marginTop: '-150px',
     //backgroundImage: `url('/homepage-title-background.png')`,
     //background: 'rgb(65,150,203)',
     //background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%)',
     backgroundPosition: 'center',
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
-    width: 'fit-content',
+    //width: 'fit-content',
     padding: '33px 32px 26px 34px',
     color: '#fff',
     textAlign: 'center',
@@ -53,7 +55,7 @@ const styles = (theme) => ({
     backgroundPosition: 'center',
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
-    width: 'fit-content',
+    //width: 'fit-content',
     padding: '20px 120px',
     color: '#fff',
     textAlign: 'center',
