@@ -1,12 +1,18 @@
 const styles = (theme) => ({
   background: {
-   // marginTop: '-114px',
-    //marginBottom: '-114px',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     '& .MuiGrid-container': {
       height: '100%',
     },
+  },
+  "& .slick-side": {
+    " div": {
+      border: "none",
+      outline: "none !important"
+    },
+    outline: "none !important",
+    border: "none",
   },
   grid: {
     alignItems: "center",
@@ -14,15 +20,15 @@ const styles = (theme) => ({
     backgroundColor: "red"
   },
   backgroundOverlay: {
+    padding: theme.spacing(20, 2),
     backgroundColor: 'rgba(0,0,0,0.5)',
-    height: 826,
+    height: 600,
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(20, 2),
       height: '100%',
     },
   },
   preTitle: {
-    marginTop: '-114px',
     backgroundColor: '#1c2834',
     padding: theme.spacing(0.5, 1),
     color: '#fff',

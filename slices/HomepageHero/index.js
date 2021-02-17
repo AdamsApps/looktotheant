@@ -36,27 +36,31 @@ const HomepageHero = (props) => {
 
   const settings = {
     autoplay: true,
-    dots: false,
+    dots: true,
+    arrows: false,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       speed: 500,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 1000000,
       cssEase: "ease-in",
-      centerMode: true,
-      //fade: true
+      appendDots: dots => (
+        
+          <ul style={{ margin: "0px" }}> {dots} </ul>
+        
+      ),
   }
 
   return (
     <div className={classes.background} style={styles}>
       <div className={classes.backgroundOverlay}>
         <Grid  container direction="column" justify="center" alignItems="center">
-        <Grid style={{width: '100%'}} item>
-          <Slider {...settings}>
+        <Grid className={classes.slider}  xs={12} item>
+          <Slider  {...settings}>
                 {slice.items.map((x, i) =>
                   <div key={i}>
-                    <Typography variant="h2" className={classes.heroTitle}>
+                    <Typography variant="h2"  className={classes.heroTitle}>
                       {RichText.asText(x.title)}
                     </Typography>
                     <Typography variant="h4" className={classes.heroSubTitle}>
