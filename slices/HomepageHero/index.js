@@ -1,12 +1,10 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
-import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 import style from './style'
-import CustomLink from '../../components/CustomLink'
 import VideoModal from '../../components/VideoModal'
 import { structuredTextPropTypes, imagePropTypes } from '../../utils/prop-types'
 import ContactMeButton from '../../components/ContactMeDialog/Button'
@@ -43,7 +41,7 @@ const HomepageHero = (props) => {
       slidesToScroll: 1,
       autoplay: true,
       speed: 500,
-      autoplaySpeed: 1000000,
+      autoplaySpeed: 7500,
       cssEase: "ease-in",
       appendDots: dots => (
         
