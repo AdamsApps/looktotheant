@@ -42,12 +42,7 @@ const HomepageHero = (props) => {
       autoplay: true,
       speed: 500,
       autoplaySpeed: 7500,
-      cssEase: "ease-in",
-      appendDots: dots => (
-        
-          <ul style={{ margin: "0px" }}> {dots} </ul>
-        
-      ),
+      cssEase: "ease-in"
   }
 
   return (
