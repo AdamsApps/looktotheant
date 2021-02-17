@@ -6,12 +6,8 @@ import { Container, Typography } from '@material-ui/core'
 import style from './style'
 import { withStyles } from '@material-ui/core/styles'
 
-import useMediaQuery from '../../utils/media-query'
-
 const AboutHome = ({ slice, classes }) => { 
   
-  
-  let isPageSmall = useMediaQuery('(max-width: 600px)')
 
   return (
   <div>
@@ -21,10 +17,10 @@ const AboutHome = ({ slice, classes }) => {
 
 <Container className={classes.container}>
 
-    <Grid className={classes.grid} container spacing={10}>
-      <Grid alignItems={isPageSmall ? "center" : "flex-start"} item xs={12} sm={12} md={5} container direction="column">
+    <Grid alignItems="center" justify="center" className={classes.grid} container>
+     
         {slice.primary.image && <img className={classes.image} src={slice.primary.image.url}/>}
-      </Grid>
+    
       <Grid item xs={12} sm={12} md={7} container direction="column">
         {
           slice.primary.title &&

@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html style={{scrollPaddingTop: 45}}>
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
