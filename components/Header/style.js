@@ -1,11 +1,4 @@
 const styles = (theme) => ({
-  // headerBg: {
-  //   backgroundImage: `url('/headertopbg.png')`,
-  //   backgroundPosition: 'center',
-  //   backgroundSize: 'cover',
-  //   position: 'relative',
-  //   zIndex: 10
-  // },
   sticky: {
       position: 'sticky',
       top:0,
@@ -20,14 +13,16 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
     '& .logo': {
-      width: 300
+      width: 300,
+      [theme.breakpoints.down('sm')]: {
+        width: 220,
+      },
     },
     '& img': {
       marginLeft: theme.spacing(2),
       display: 'block'
     },
     '& .company':{
-     // fontFamily: '',
       flexDirection: 'column',
       marginLeft: theme.spacing(2),
       display: 'flex',

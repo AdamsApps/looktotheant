@@ -6,14 +6,6 @@ const styles = (theme) => ({
       height: '100%',
     },
   },
-  "& .slick-side": {
-    " div": {
-      border: "none",
-      outline: "none !important"
-    },
-    outline: "none !important",
-    border: "none",
-  },
   grid: {
     alignItems: "center",
     justifyContent:"center",
@@ -37,14 +29,9 @@ const styles = (theme) => ({
     textTransform: 'uppercase',
   },
   heroTitle: {
-    //marginTop: '-150px',
-    //backgroundImage: `url('/homepage-title-background.png')`,
-    //background: 'rgb(65,150,203)',
-    //background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%)',
     backgroundPosition: 'center',
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
-    //width: 'fit-content',
     padding: '33px 32px 26px 34px',
     color: '#fff',
     textAlign: 'center',
