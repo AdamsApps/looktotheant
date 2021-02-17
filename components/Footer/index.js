@@ -14,9 +14,9 @@ const Footer = ({ classes }) => {
   return (
     
           <Grid
+        
             className={classes.footer}
             container
-            
             direction="column"
             justify="center"
             alignItems="center"
@@ -51,9 +51,9 @@ const Footer = ({ classes }) => {
             </div>
            
             </Grid>
-            <Grid item >
-            <img src={layout.logo1.url} alt="" className="logoImg" />
-            </Grid>
+          
+              <img src={layout.logo1.url} alt="" className="logoImg" />
+          
           </Grid>
       
   )

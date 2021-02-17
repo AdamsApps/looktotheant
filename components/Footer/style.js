@@ -10,7 +10,7 @@ textDecoration: "none"
     justify: "center",
     alignItems: "center",
     background: 'linear-gradient(90deg, rgba(65,150,203,1) 0%, rgba(235,226,188,1) 100%);',
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       paddingTop: theme.spacing(5),
@@ -41,11 +41,8 @@ textDecoration: "none"
       },
     },
     '& .logoImg': {
-      textAlign: "center",
-      width: 100,
-      [theme.breakpoints.down('xs')]: {
-        margin: '16px auto 16px',
-      },
+    
+      width: 100
     }
   }
 })
