@@ -63,11 +63,12 @@ const HomepageHero = (props) => {
                 )}
             
             </Slider>
+            <div className={classes.heroButton}>
+              <ContactMeButton text= {RichText.asText(primary.primaryCtaButtonText)}></ContactMeButton>
+            </div>
         </Grid>
        
-          <div className={classes.heroButton}>
-            <ContactMeButton text= {RichText.asText(primary.primaryCtaButtonText)}></ContactMeButton>
-          </div>
+          
         </Grid>
       </div>
       <VideoModal open={openModal} handleClose={closeVideoDialog} video={primary.vimeoLink} />

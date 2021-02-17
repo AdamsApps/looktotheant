@@ -64,11 +64,11 @@ const styles = (theme) => ({
     '& button': {
       margin: theme.spacing(2),
     },
-    [theme.breakpoints.down('sm')]: {
+    
       justifyContent: 'center',
       flexDirection: 'column;',
       alignItems: 'center',
-    },
+    
   },
   pointsWrapper: {
     display: 'flex',

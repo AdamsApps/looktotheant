@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   const { layout } = useLayout();
 
   return (
-    <div style={{width: '100%', maxWidth: '100%'}}>
+    <div>
       <Header />
       {children}
       <Footer />
