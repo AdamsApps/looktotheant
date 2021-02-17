@@ -13,11 +13,9 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Drawer from '@material-ui/core/Drawer'
 import style from './style'
 import { useLayout } from '../../utils/layout-context'
-import { linkResolver, hrefResolver } from '../../prismic-example'
 import CustomLink from '../CustomLink'
 import {useRouter} from 'next/router'
 import clsx from 'clsx'
-import Typography from '@material-ui/core/Typography'
 import Subheader from '../SubHeader'
 import ContactMeButton from '../ContactMeDialog/Button'
 
@@ -35,13 +33,9 @@ const Header = ({ classes }) => {
   }
 
   const clickItem = (link) => {
-    //router.push(hrefResolver("#about"), linkResolver("#about"))
-    //console.log("mobile menu")
     location.href = link;
     setOpen(false)
   }
-
-  console.log("layout.menu_items",layout.menu_items)
 
   return (
     <div className={classes.sticky}>

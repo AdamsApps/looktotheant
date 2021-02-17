@@ -1,7 +1,6 @@
 const styles = (theme) => ({
   subHeader: {
     display: 'flex',
-    //padding: theme.spacing(1.5, 2),
     justifyContent: 'center',
     alignItems: 'center',
     height: 15,

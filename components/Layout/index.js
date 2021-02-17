@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Header from '../Header'
-import Download from '../Download'
-import NewsUpdate from '../NewsUpdate'
 import Footer from '../Footer'
 import { useLayout } from '../../utils/layout-context';
 
@@ -12,11 +10,9 @@ const Layout = ({ children }) => {
   const { layout } = useLayout();
 
   return (
-    <div style={{width: '100%', overflowX:"hidden", overflowY: "hidden"}}>
+    <div style={{width: '100%', maxWidth: '100%'}}>
       <Header />
       {children}
-      {/* <Download />
-      <NewsUpdate /> */}
       <Footer />
     </div>
   )

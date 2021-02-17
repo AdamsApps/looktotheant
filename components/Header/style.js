@@ -37,7 +37,6 @@ const styles = (theme) => ({
       alignItems: 'center',
       marginRight: theme.spacing(2),
       '& a.menuLink': {
-        //color: theme.palette.primary.main,
         color: 'grey',
         fontFamily: 'Raleway',
         fontSize: 18,

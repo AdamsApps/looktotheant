@@ -16,7 +16,7 @@ const Footer = ({ classes }) => {
 
   return (
           <Grid
-          className={classes.footer}
+            className={classes.footer}
             container
             spacing={6}
             direction="row"
