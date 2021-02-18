@@ -8,7 +8,7 @@ import style from './style'
 import VideoModal from '../../components/VideoModal'
 import { structuredTextPropTypes, imagePropTypes } from '../../utils/prop-types'
 import ContactMeButton from '../../components/ContactMeDialog/Button'
-
+import useMediaQuery from '../../utils/media-query'
 import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css"
 import "../../node_modules/slick-carousel/slick/slick-theme.css"
@@ -18,6 +18,8 @@ const HomepageHero = (props) => {
   const { primary } = slice
   const [openModal, setOpenModal] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  let isPageSmall = useMediaQuery('(max-width: 600px)')
 
   let styles = {}
 
@@ -31,19 +33,20 @@ const HomepageHero = (props) => {
 
   console.log("slice",slice)
 
-  // var images = [
-  //   primary.backgroundImage.url,
-  //   "https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=60",
-  //   "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=60",
-  //   "https://images.unsplash.com/photo-1576036668621-a292c88aa53c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=60"
-  // ];
 
-  var images = slice.items.map(x => x.image.url)
+let images = []
+
+if (isPageSmall){
+  images = slice.items.map(x => x.image.mobile.url)
+}else {
+  images = slice.items.map(x => x.image.url)
+}
 
   const settings = {
     autoplay: true,
     dots: true,
     arrows: false,
+    lazyLoad: true,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,

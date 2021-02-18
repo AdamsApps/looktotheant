@@ -154,7 +154,13 @@
               "width": 4320,
               "height": 2478
             },
-            "thumbnails": []
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 2000,
+                "height": 3000
+              }
+            ]
           },
           "type": "Image"
         }
