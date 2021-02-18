@@ -17,11 +17,6 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <meta property="og:image" content="https://images.prismic.io/personal-training-jerusalem/9ce461e0-ee16-42cf-8de7-244384911695_Bethany066.jpg?auto=compress,format" />
-          <meta property="og:type" content="website"/>
-          <meta property="og:url" content="https://www.personaltrainingjerusalem.com" />
-          <meta property="og:title" content="Your fitness, your way"/ >
-          <meta property="og:description" content="A safe, personaliized fitness experience, tailored to your goals!"/>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
