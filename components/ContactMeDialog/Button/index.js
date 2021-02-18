@@ -22,7 +22,7 @@ const ContactMeButton = ({classes,text,size}) => {
   
     return (
       <div>
-        <Button variant="contained" color="primary" size={size} onClick={handleClickOpen}>{text}</Button>
+        <Button className="button" variant="contained" color="primary" size={size} onClick={handleClickOpen}>{text}</Button>
         <ContactMeDialog selectedValue={'1'} open={open} onClose={handleClose} />
       </div>
     );

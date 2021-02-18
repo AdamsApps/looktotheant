@@ -94,11 +94,7 @@ const Header = ({ classes }) => {
               </ListItem>
             ))}
           </List>
-          <CustomLink link={layout.give_button_link}>
-            <Button variant="contained" color="primary" className="button" onClick={() => setOpen(false)}>
-              {RichText.asText(layout.give_button_text)}
-            </Button>
-          </CustomLink>
+          <ContactMeButton {...{size:"small", text:RichText.asText(layout.give_button_text)}}></ContactMeButton>
         </Drawer>
         
       </Container>
