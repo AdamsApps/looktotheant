@@ -6,9 +6,17 @@ const styles = (theme) => ({
       height: '100%',
     },
   },
+  slider: {
+    "& .slick-slide, & .slick-prev, & .slick-next": {
+      outline: "none !important",
+      "& div": {
+        outline: "none !important"
+      }
+    }
+  },
   grid: {
     alignItems: "center",
-    justifyContent:"center",
+    justifyContent: "center",
     backgroundColor: "red"
   },
   backgroundOverlay: {
@@ -64,11 +72,11 @@ const styles = (theme) => ({
     '& button': {
       margin: theme.spacing(2),
     },
-    
-      justifyContent: 'center',
-      flexDirection: 'column;',
-      alignItems: 'center',
-    
+
+    justifyContent: 'center',
+    flexDirection: 'column;',
+    alignItems: 'center',
+
   },
   pointsWrapper: {
     display: 'flex',
