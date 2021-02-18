@@ -146,6 +146,17 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,rtl"
           },
           "type": "StructuredText"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 4320,
+              "height": 2478
+            },
+            "thumbnails": []
+          },
+          "type": "Image"
         }
       }
     }

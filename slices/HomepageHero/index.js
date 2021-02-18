@@ -17,12 +17,9 @@ const HomepageHero = (props) => {
   const { slice, classes } = props
   const { primary } = slice
   const [openModal, setOpenModal] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  console.log("slice",slice)
-  const styles = {}
-  if (primary.backgroundImage) {
-    styles.backgroundImage = `url(${primary.backgroundImage.url})`
-  }
+  let styles = {}
 
   const openVideoDialog = () => {
     setOpenModal(true)
@@ -31,6 +28,17 @@ const HomepageHero = (props) => {
   const closeVideoDialog = () => {
     setOpenModal(false)
   }
+
+  console.log("slice",slice)
+
+  // var images = [
+  //   primary.backgroundImage.url,
+  //   "https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=60",
+  //   "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=60",
+  //   "https://images.unsplash.com/photo-1576036668621-a292c88aa53c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=60"
+  // ];
+
+  var images = slice.items.map(x => x.image.url)
 
   const settings = {
     autoplay: true,
@@ -42,7 +50,16 @@ const HomepageHero = (props) => {
       autoplay: true,
       speed: 500,
       autoplaySpeed: 7500,
-      cssEase: "ease-in"
+      cssEase: "ease-in",
+      beforeChange: (current, next) => {
+        var nextIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex+1;
+        setCurrentImageIndex(nextIndex);
+      }
+  }
+
+  if (primary.backgroundImage) {
+    styles.backgroundImage = `url(${images[currentImageIndex]})`
+    styles.transition = "background-image 0.1s ease-in-out";
   }
 
   return (
