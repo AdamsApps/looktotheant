@@ -53,6 +53,8 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
             Enter your details and we will get back to you ASAP!
           </DialogContentText>
           <TextField
+          required={true}
+
             inputRef={name}
             autoFocus
             margin="dense"
@@ -63,6 +65,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
             fullWidth
           />
           <TextField
+          required={true}
             inputRef={email}
             margin="dense"
             id="email"
@@ -72,6 +75,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
             fullWidth
           />
           <TextField
+          required={true}
           inputRef={phone}
             margin="dense"
             id="phone"
@@ -81,7 +85,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
             fullWidth
           />
           <TextField
-          inputRef={message}
+            inputRef={message}
             margin="dense"
             id="message"
             name="message"
@@ -94,7 +98,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
           <input type="hidden" name="form-name" value="contact" />
         </DialogContent>
         <DialogActions style={{padding: 24}}>
-          <Button type="submit" variant="contained" color="primary">
+          <Button  type="submit" variant="contained" color="primary">
             SUBMIT
           </Button>
         </DialogActions>
