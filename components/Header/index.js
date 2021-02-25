@@ -44,11 +44,9 @@ const Header = ({ classes }) => {
   
         <Link href="/">
           <a>
-            {headerColor ? (
+           
               <img src={layout.colored_logo.url} className="logo" alt="" />
-            ) : (
-              <img src={layout.white_logo.url} className="logo" alt="" />
-            )}
+           
           </a>
         </Link>
         <div className="menu">
