@@ -62,7 +62,7 @@ if (isPageSmall){
 
   if (primary.backgroundImage) {
     styles.backgroundImage = `url(${images[currentImageIndex]})`
-    styles.transition = "background-image 0.1s ease-in-out";
+    styles.transition = "background-image 1s ease-in-out";
   }
 
   return (
