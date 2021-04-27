@@ -16,7 +16,7 @@ const Head = ({ data }) => {
           <meta property="og:type" content="article"/>
           <meta property="og:url" content="https://www.personaltrainingjerusalem.com" />
           <meta property="og:title" content="Your fitness, your way"/ >
-          <meta property="og:description" content="A safe, personaliized fitness experience, tailored to your goals!"/>
+          <meta property="og:description" content="A safe, personalized fitness experience, tailored to your goals!"/>
         </>
       }
     </Header>
