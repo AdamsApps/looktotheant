@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid'
 import { useLayout } from '../../utils/layout-context'
 import style from './style'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import analyticsService from '../../utils/analytics-service'
 const Footer = ({ classes }) => {
   const { layout } = useLayout();
 
@@ -45,7 +45,7 @@ const Footer = ({ classes }) => {
     
                 return (<div className={classes.icon} key={index}>
                   <FontAwesomeIcon  size="lg" icon={[font, icon]} />
-                  <a className={classes.bareLink} href={href}>{RichText.render(contact.contact_details1)}</a>
+                  <a className={classes.bareLink} href={href} onClick={analyticsService.trackConversion}>{RichText.render(contact.contact_details1)}</a>
                   </div>)
               })}
             </div>

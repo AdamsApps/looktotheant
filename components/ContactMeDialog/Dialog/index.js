@@ -10,30 +10,13 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import Button from '@material-ui/core/Button'
-
+import analyticsService from '../../../utils/analytics-service'
 const ContactMeDialog = ( {classes,onClose,open} ) => {
 
     const name = useRef('');
     const email = useRef('');
     const phone = useRef('');
     const message = useRef('');
-
-
-    function gtag_report_conversion(url) {
-
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-          console.log("We got a conversion!")
-        }
-      };
-
-      gtag('event', 'conversion', {
-          'send_to': 'AW-300427578/XB11CNnCu_QCELrSoI8B',
-          'event_callback': callback
-      });
-      return false;
-    }
 
     const handleSubmit = (event)=> {
 
@@ -49,7 +32,7 @@ const ContactMeDialog = ( {classes,onClose,open} ) => {
         body: encoded
       }).then(() => {
         console.log('Form successfully submitted')
-        gtag_report_conversion()
+        analyticsService.trackConversion()
         handleClose()
       }).catch((error) =>
         alert(error))
