@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html style={{scrollPaddingTop: 45}}>
+      <Html style={{ scrollPaddingTop: 45 }}>
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
@@ -22,21 +22,31 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           <link
-            rel="stylesheet" 
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" 
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
           />
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
-          <link href="/fonts/style.css" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+          <link href="/fonts/style.css" rel="stylesheet" />
           <meta name="msapplication-TileColor" content="#2d89ef" />
           <meta name="theme-color" content="#ffffff" />
+          {/* Global site tag (gtag.js) - Google Ads: 300427578 */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-300427578"></script>
+          <script dangerouslySetInnerHTML={
+            {
+              __html: ` window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-300427578');`}
+          }>
 
+          </script>
         </Head>
         <body>
           <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
             <input type="text" name="moniker" />
             <input type="email" name="email" />
-            <input type="text" name="phone"/>
-            <input type="text" name="message"/>
+            <input type="text" name="phone" />
+            <input type="text" name="message" />
           </form>
           <Main />
           <NextScript />
