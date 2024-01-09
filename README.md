@@ -1,4 +1,4 @@
-# With Love Charity - Prismic Template
+# Look to the ant - Prismic Template
 We believe that SliceMachine is the entry point and stepping stone towards Prismic Templates - allowing developers to create beautifully styled websites easily with a click of a button.
 
 As WITH LOVE INTERNET, we wanted to create a complete example to demonstrate Prismic’s SliceMachine incredible capabilities. We hope that this example helps the community and Prismic develop and expand.
